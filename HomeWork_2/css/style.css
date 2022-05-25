@@ -1,0 +1,44 @@
+* {
+    margin: 15px;
+    padding: 0;
+}
+
+h1 {
+    background-color: darkgrey;
+}
+
+.about_me {
+    text-align: center;
+}
+
+.punkt_1 {
+    text-align: center;
+    font-style: italic;
+    font-size: 60px;
+    color: slategrey;
+}
+
+.picture_1 {
+    width: 600px;
+    height: auto;
+}
+
+.span:hover {
+    font-style: italic;
+    cursor: pointer;
+    background-color: grey;
+}
+
+
+
+.languadges {
+    padding-left: 60px;
+}
+
+.first_line {
+    background-color: grey;
+}
+
+.second_line {
+    background-color: darkgray;
+}
