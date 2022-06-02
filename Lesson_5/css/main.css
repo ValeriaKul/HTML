@@ -1,0 +1,6 @@
+#main_menu {
+    color: rgb(65, 64, 64);
+    font-size: 5vw;
+    display: flex;
+    justify-content: space-around;
+}

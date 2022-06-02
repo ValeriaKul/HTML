@@ -1,0 +1,9 @@
+.background {
+    
+    background-image: url(../img/background.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 2vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
