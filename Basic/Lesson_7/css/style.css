@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+.div_1 {
+    background-color: pink;
+}
+
+.div_2 {
+    background-color: yellow;
+    position: relative;
+    left: 50px;
+    top: 50px;
+}
+
+.div_3 {
+    background-color: blue;
+}
