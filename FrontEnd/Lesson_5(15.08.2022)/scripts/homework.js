@@ -7,7 +7,7 @@
     }
     console.log(getGreeting('Valeriia'));
 
-    let getGreeting_arrow = (lastName) => `Dear ${lastName}, welcome.`;
+    let getGreeting_arrow = lastName => `Dear ${lastName}, welcome.`;
     console.log(getGreeting_arrow('Valeriia'));
 
 // 2. Напишите функцию, которая принимает в качестве аргументов два значения: имя и возраст. 
@@ -33,6 +33,12 @@
         } 
     }
     console.log(getGreeting1_arrow('Olga', 28));
+
+// ТЕРНАРНЫЙ ОПЕРАТОР:
+// УСЛОВИЕ ? УСЛОВИЕ ВЕРНО : УСЛОВИЕ НЕВЕРНО
+
+    const getMessage_tern = (lastName, age) =>  age < 18 ? `Dear ${lastName}, you are younger than 18!` : `Dear ${lastName}, you are adult.`
+    console.log(getMessage_tern('Anna', 27));
 
 // 3. Напишите функцию, которая принимает два числовых аргумента и возвращает результат их умножения. 
 //    Значение второго аргумента должно быть указано по умолчанию 2. 

@@ -79,7 +79,7 @@ function getMin (number1, number2, number3) {
      if (number3 >= number2 && number3 >= number1) {
         max = number3;
     } 
-    if (number1 === number2 && number1 === number3) {
+    if (number1 == number2 && number1 == number3) {
         min = number1;
         mid = number2;
         max = number3;
