@@ -13,5 +13,4 @@ console.log(+number.toFixed(3));
 //    First: <первая буква строки>
 //    Last: <последняя буква строки>
 let text = 'Hello World';
-console.log(`First: ${text[0]}\n       
-Last: ${text[text.length-1]}`);         // \n - пишет с новой строки
+console.log(`First: ${text[0]}\n Last: ${text[text.length-1]}`);         // \n - пишет с новой строки
