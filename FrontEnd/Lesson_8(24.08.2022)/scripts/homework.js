@@ -20,14 +20,21 @@ return count;
 /* ЗАДАЧА 2
 Дан массив с числами.
 Оставьте в нем только положительные числа. Затем извлеките квадратный корень из этих чисел. */
+
 let newArr3 = arr.filter(el => el > 0).map(el => Math.sqrt(el));
+
 // console.log(newArr3);
 
 /* ЗАДАЧА 3
 Дан массив из разных типов данных.
 Необходимо сформировать массив из чисел (если значение не число, то подставить -1) */
+
 let arr2 = [8, 'hello', true, false, 'bye', 122, undefined, 15];
-let newArr4 = arr2.map(el => Number.isInteger(el) ? el : '-1');
+
+let newArr4 = arr2.map(el => Number.isInteger(el) ? el : -1);
+
+let newArr4_2 = arr2.map(el => typeof el === 'number' ? el : -1);
+
 // console.log(newArr4);
 
 /* ЗАДАЧА 4
@@ -44,5 +51,5 @@ let arr3 = [
     ['Сидр', 'Сидоров', false]
   ]
 
-let newArr5 = arr3.filter(el => el[el.length-1] == true).map(el => `${el[0]} ${el[1]}`);
+let newArr5 = arr3.filter(el => el[el.length-1] === true).map(el => `${el[0]} ${el[1]}`);
 // console.log(newArr5);
