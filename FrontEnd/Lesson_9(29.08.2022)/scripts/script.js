@@ -46,3 +46,4 @@ let newArray4 = arrayNumbers.filter(el => {
 // console.log(count);
 let count2 = 0;
 let newArray5 = arrayNumbers.filter(el => el % 10 == 7).reduce((total, el) => total + el);
+

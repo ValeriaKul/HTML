@@ -15,3 +15,7 @@ let upgradeArr2 = arr.filter(el => el > 0 && el % 10 === 3).reduce((total, el) =
 //Сформируйте массив, в котором положительные числа на строку '+', а отрицательные числа - на '-'
 let upgradeArr3 = arr.map(el => el > 0 ? '+' : '-');
 
+let range = (n, m) => {
+    let 
+}
+
