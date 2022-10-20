@@ -11,4 +11,47 @@ https://vimeo.com/744960768/b7cfa4e9ca?embedded=true&source=vimeo_logo&owner=180
     - Работа с объектами в массиве       
 
 HOMEWORK
+Дан массив объектов:
+const people = [
+    {
+      first_name: "Ivan",
+      last_name: "Ivanov",
+      age: 20,
+      city: "Moscow",
+      country: "Russia",
+      active: true,
+    },
+    {
+      first_name: "dmitry",
+      last_name: "Petrov",
+      age: 7,
+      city: "Berlin",
+      country: "Germany",
+      active: true,
+    },
+    {
+      first_name: "Irina",
+      last_name: "Alexandrova",
+      age: 46,
+      city: "Paris",
+      country: "France",
+      active: false,
+    },
+    {
+      first_name: "Denis",
+      last_name: "Sokolov",
+      age: 10,
+      city: "Rome",
+      country: "Italy",
+      active: false,
+    },
+  ];
+
+1. сформируйте массив строк - каждая строка включает в себя информацию по каждрму человеку в следующем порядке:
+"<name> <last_name> (<city>, <country>)".
+2. сформируйте массив активных людей
+3. сформируйте массив из людей, чьи имена начинаются на 'D' без учета регистра
+4. Получите из массива объект, где страной проживания является Германия
+5. Сформируйте массив из совершеннолетних пользователей. Выведите в консоль результат в формате: 
+6. Измените у первого элемента значение имени на 'Petr' и возраст на 99;
 
