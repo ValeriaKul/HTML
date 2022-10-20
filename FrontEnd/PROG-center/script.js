@@ -1,6 +1,6 @@
 //============18================
-function handler (array) {
-    let newArray3 = array.map(el => el = Math.abs(el));
+function handler1 (array) {
+    let newArray = array.map(el => el = Math.abs(el));
       return newArray;
     }
 
@@ -18,15 +18,17 @@ let arr4 = [];
 // формирует новый массив, из которого исключены числа, равные своему индексу в массиве.
 // Для решения задачи используйте метод массива filter и indexOf.
 
-function handler2 (arrayOld) {
-	let newArray = arrayOld.filter (el => el !== el.indexOf() )
-  return newArray;
-}
+// function handler2 (array) {
+//   let newArray = array.filter((element, index) => {
+//     array.indexOf(element) === index});
+//     return newArray;
+// }
 
   
   
 let arr = [12, 1, 1, 3, 5];
-console.log(handler2(arr));
+         // 0  1  1  3  4 
+// console.log(handler2(arr));
 
 
 function handler3 (array) {
@@ -43,3 +45,26 @@ function handler3 (array) {
 // let arr55 = [1, 1, 1, 1, 1, 1, 1];
 // // console.log(handler3(arr));
 // console.log(handler3(arr55));
+
+//=============20============
+/* Создайте функцию handler, которая принимает в качестве аргумента массив с положительными числами,
+ формирует новый массив после дедупликации (удалены все повторяющиеся числа).
+Для решения задачи используйте метод массива filter. */
+
+function handler (array) {
+  let newArray = array.filter(element => array.indexOf(element)
+  );
+  return newArray;
+}
+
+
+let newArr = [12, 4, 54, 3];
+console.log(handler(newArr));
+
+let chars = ['a', 'b', 'a', 'c', 'b'];
+let uniqueChars = chars.filter((element, index) => {
+    return chars.indexOf(element) === index;
+});
+
+console.log(uniqueChars);
+
