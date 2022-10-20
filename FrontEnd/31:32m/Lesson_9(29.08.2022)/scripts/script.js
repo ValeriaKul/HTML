@@ -23,7 +23,7 @@ for (let i = 0; i < numbers.length; i++) {
 let result = numbers.reduce((total, el) =>  total + el, 0);
 // console.log(result);
 
-//дан массив 
+//дан массив. Найти среднее арифметическое всех элементов массива
 let nums = [3, 6, 7, 1];
 let result2 = nums.reduce((total, el) =>  total + el ) / nums.length;
 // console.log(result2);
