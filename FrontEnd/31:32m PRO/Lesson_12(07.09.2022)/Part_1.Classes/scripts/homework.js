@@ -43,9 +43,9 @@ const worker_1 = new Worker('Ivan', 'Petrov', 1500, 10);
 const worker_2 = new Worker('Petr', 'Ivanov', 1000, 20);
 const worker_3 = new Worker('Igor', 'Alexandrovich', 2500, 15);
 
-worker_1.getSalary();
-worker_2.getSalary();
-worker_3.getSalary();
+// worker_1.getSalary();
+// worker_2.getSalary();
+// worker_3.getSalary();
 
 
 

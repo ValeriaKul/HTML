@@ -1,0 +1,16 @@
+
+LINK - https://vimeo.com/747252693/c75bc77d8b?embedded=true&source=vimeo_logo&owner=180459310
+
+ТЕМЫ УРОКА:
+    - создание классов и работа с ними
+    - создание методов классов
+    - создание экземпляров классов
+    - использование методов массивов для работы с классами
+    - DOM - Document Object Model
+    - взаимодействие с HTML документом с помощью JS
+            const header = document.querySelector('.header'); - поиск документа в HTML документе
+            const text = document.createElement(); - создание нового элемента
+            container.append(text); - добавить элемент внутрь контейнера (аналог .push в array)
+            text.innerText = 'Text ...' - добавление текста
+HOMEWORK
+
