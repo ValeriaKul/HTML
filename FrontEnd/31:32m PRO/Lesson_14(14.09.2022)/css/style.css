@@ -1,0 +1,16 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.card {
+    width: 250px;
+    border: 1px solid black;
+    background-color: beige;
+    padding: 10px;
+    margin: 10px;
+}
+
+.photo {
+    display: block;
+}
