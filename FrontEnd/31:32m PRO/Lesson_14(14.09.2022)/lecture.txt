@@ -4,3 +4,5 @@ LINK => https://vimeo.com/749543153/408cdd95ba?embedded=false&source=vimeo_logo&
 ТЕМЫ УРОКА:
     - добавление фотографий
     - деструктуризация
+
+    
