@@ -19,6 +19,7 @@ function camelize (text) {
     let newText =  textArray.join('');
     return newText;
     };
+
 // =============Task_2=============   
 function addNumbers (array) {
     let positiveNumber = 0;
@@ -34,12 +35,12 @@ function addNumbers (array) {
     let newArray = [positiveNumber, negativeNumber];
     return newArray;
     };
-
+// ---------------------------------
 function addNumbers2 (array) {
     let positiveNumber = 0;
     let negativeNumber = 0;
         array.forEach(element => {
-            element > 0 ? positiveNumber = element += positiveNumber : negativeNumber = element += negativeNumber;
+            element > 0 ? element += positiveNumber : element += negativeNumber;
         });
     return [positiveNumber, negativeNumber];
     };
