@@ -96,7 +96,7 @@ let mixedArray = ['Hello', ' ', 'world', 'My name is Valeria', 1, 2, 3]
 // console.log(result)// ['привет', js', 'java', 'script', 'redButton', 3, 65, true, false, []]
 
 function sortArray (array1, array2, array3) {
-    let createArray = array1.concat(array2).concat(array3);
+    let createArray = array1.concat(array2, array3);
     let typeOfData = ['string', 'boolean', 'number', 'other'];
     let sortArray = [];
     for (let i = 0; i < typeOfData.length; i++) {

@@ -49,26 +49,37 @@ const workers = [
   
   const root = document.querySelector('#root');
 
-  function getCard (id, first_name, last_name, age, rate, days, photo) {
+  function getCard (id, first_name, last_name, age, rate, days, photo, progress) {
     const card = document.createElement('div');
     const id_elem = document.createElement('p');
     const name_elem = document.createElement('p');
     const age_elem = document.createElement('p');
     const salsary_elem = document.createElement('p');
     const photo_elem = document.createElement('img');
-
+    const progressContainer = document.createElement('div');
+    const progressLine = document.createElement('div');
+    const progressValue = document.createElement('p');
+  
     card.classList.add('card');
+    progressContainer.classList.add('progress-container');
+    progressLine.classList.add('progress-line');
+    progressValue.classList.add('progress-value');
+
+    progressLine.style.width = progress + '%';
 
     id_elem.innerText = `ID: ${id}`;
     name_elem.innerText = `Name: ${first_name} ${last_name}`;
     age_elem.innerText = `Age: ${age}`;
     salsary_elem.innerText = `Salary: ${rate * days} $`;
     photo_elem.src = photo;
-    card.append(id_elem, name_elem, age_elem, salsary_elem, photo_elem);
+    progressValue.innerText = `${progress}%`;
+
+    progressContainer.append(progressLine, progressValue);
+    card.append(id_elem, name_elem, age_elem, salsary_elem, photo_elem, progressContainer);
     return card;
   }
 
   workers.forEach(user => {
-    const card = getCard (user.id, user.first_name, user.last_name, user.age, user.rate, user.days, user.photo);
+    const card = getCard (user.id, user.first_name, user.last_name, user.age, user.rate, user.days, user.photo, user.progress);
     root.append(card);
   })

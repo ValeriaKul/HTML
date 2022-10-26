@@ -37,10 +37,18 @@ function handler3(array) {
   return newArray;
 }
 
+
+function handler(array) {
+  let newArray =  array.filter(
+    element=> array.indexOf(element) === element)
+    return newArray;
+}
+
+
 // let arr = [12, 1, 1, 3, 5];
 // let arr55 = [1, 1, 1, 1, 1, 1, 1];
-// // console.log(handler3(arr));
-// console.log(handler3(arr55));
+// console.log(handler(arr));
+// console.log(handler(arr55));
 
 //=============20============
 /* Создайте функцию handler, которая принимает в качестве аргумента массив с положительными числами,
@@ -48,16 +56,17 @@ function handler3(array) {
 Для решения задачи используйте метод массива filter. */
 
 function handler(array) {
-  let newArray = array.filter((element) => array.indexOf(element));
-  return newArray;
+    return array.filter(
+      element=> array.indexOf(element) === element
+    )
 }
 
 let newArr = [12, 4, 54, 3];
-console.log(handler(newArr));
+// console.log(handler(newArr));
 
 let chars = ["a", "b", "a", "c", "b"];
 let uniqueChars = chars.filter((element, index) => {
   return chars.indexOf(element) === index;
 });
 
-console.log(uniqueChars);
+// console.log(uniqueChars);
