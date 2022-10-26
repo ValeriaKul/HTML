@@ -20,11 +20,13 @@
     position: relative;
     border: 1px solid black;
     height: 20px;
+    
 }
 .progress-line {
     position: absolute;
-    background-color: lightblue;
+    /* background-color: lightblue; */
     height: 100%;
+
 }
 .progress-value{
     position: absolute;

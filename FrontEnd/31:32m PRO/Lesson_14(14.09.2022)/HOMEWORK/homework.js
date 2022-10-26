@@ -64,7 +64,8 @@ const workers = [
     progressContainer.classList.add('progress-container');
     progressLine.classList.add('progress-line');
     progressValue.classList.add('progress-value');
-
+    
+    progressLine.style.backgroundColor = progress >= 50 ? 'green' : 'red';
     progressLine.style.width = progress + '%';
 
     id_elem.innerText = `ID: ${id}`;
