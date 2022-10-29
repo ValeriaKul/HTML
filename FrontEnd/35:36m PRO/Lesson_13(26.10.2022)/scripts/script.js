@@ -1,4 +1,4 @@
-// function withOutArray(array, ...deleteData) {           // получаем на ходе 2 массива
+// function withOutArray(array, ...deleteData) {           // получаем на входе 2 массива
 //     let filteredArray = [...array];                     // клонируем массив
 //     deleteData.forEach(                                 // перебор массива deleteData
 //         item => {
@@ -9,6 +9,7 @@
 //     }
 
 let someArray = ['ttt', 'fff', 555, true, false, undefined, null, 0, 5, 61, 1];
+
 // console.log(someArray);
 // console.log(null, 5, 1, false, 555);
 // withOutArray(someArray, null, 5, 1, false, 555);
@@ -32,7 +33,6 @@ let someArray = ['ttt', 'fff', 555, true, false, undefined, null, 0, 5, 61, 1];
 // }
 
 
-// Напишите функцию, которая очищает массив от нежелательных значений, таких как false, undefined, пустые строки, ноль, null.
 function withOutArray(array, ...deleteData) {
     let newArr = [];
     for (let i = 0; i < array.length; i++) {
@@ -65,3 +65,6 @@ function isNotIncluded (array, element) {
 }
 
 console.log(withOutArray2(someArray, null, 5, 1, false, 555));
+
+
+// Напишите функцию, которая очищает массив от нежелательных значений, таких как false, undefined, пустые строки, ноль, null.
