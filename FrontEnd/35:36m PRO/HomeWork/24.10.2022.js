@@ -31,6 +31,11 @@ function filterRangeInPlace(array, a, b) {
 }
 let arr = [5, 3, 8, 1, -5, 10, 2, 4];
 filterRangeInPlace(arr, 1, 4); 
+// console.log(arr);
+
+function filterRangeInPlace2(array, a, b) {
+    array.filter(el => {el < a || el > b})
+}  
+
+filterRangeInPlace2(arr, 1, 4); 
 console.log(arr);
-
-
