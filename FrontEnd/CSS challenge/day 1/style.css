@@ -1,0 +1,85 @@
+.frame {
+  position: absolute;
+  border-radius: 5px;
+  /* top: 50%;
+    left: 50%; */
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(45deg, blue, lightblue);
+  font-family: "Courier New", Courier, sans-serif;
+  color: #fff;
+  box-shadow: 0 0 13px 0 rgba(0, 0, 0, 2);
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  left: 20px;
+}
+
+.number .one-one {
+  position: absolute;
+  top: 0;
+  left: -32px;
+  height: 40px;
+  width: 20px;
+  background: #fff;
+  border-radius: 3px;
+  transform: rotate(50deg);
+  box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.5);
+}
+
+.number .one-two {
+  position: absolute;
+  top: 0;
+  left: 0;
+  left: -16px;
+  height: 100px;
+  width: 20px;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.5);
+}
+
+.zero-one,
+.zero-two {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  border: 20px solid #fff;
+  border-radius: 50%;
+  left: -6px;
+  box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.5);
+}
+
+.zero-two {
+  left: 82px;
+}
+
+.days {
+  position: relative;
+  display: block;
+  margin: 0px;
+  font-size: 80px;
+  font-weight: 700;
+  height: 80px;
+}
+
+.css-challenge {
+  position: relative;
+  display: block;
+  margin: 0px;
+  font-size: 24px;
+  font-weight: 600;
+  height: 80px;
+}
