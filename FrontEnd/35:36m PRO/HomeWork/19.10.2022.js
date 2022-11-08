@@ -8,76 +8,73 @@
 */
 //==============Task_1============
 
-
-function returnTypeOfArray (array, typeOfArray) {
-    let isType = true;
-    for (let i = 0; i < array.length; i++) {
-       if (typeof array[i] == typeOfArray) {
-            isType = isType && true;
-       } else {
-            isType = isType && false;
-       }
+function returnTypeOfArray(array, typeOfArray) {
+  let isType = true;
+  for (let i = 0; i < array.length; i++) {
+    if (typeof array[i] == typeOfArray) {
+      isType = isType && true;
+    } else {
+      isType = isType && false;
     }
-    return isType;  
+  }
+  return isType;
 }
 
-function treatmentArray (array, typeOfArray) { 
-   
-    let newArray = [];
+function treatmentArray(array, typeOfArray) {
+  let newArray = [];
+  let maxElementIndex = 0;
+  if (typeOfArray == "string") {
+    for (let i = 1; i < array.length; i++) {
+      if (array[i].length > array[maxElementIndex].length) {
+        maxElementIndex = i;
+      }
+    }
+    newArray.push(array[maxElementIndex]);
+    newArray.push(maxElementIndex);
+    return newArray;
+  }
+
+  if (typeOfArray == "number") {
     let maxElementIndex = 0;
-
-    if (typeOfArray == 'string') {
-        
-        for (let i = 1; i < array.length; i++) {
-            if (array[i].length > array[maxElementIndex].length) {
-                maxElementIndex = i;
-            }
-        }
-        newArray.push(array[maxElementIndex]);
-        newArray.push(maxElementIndex);
-        return newArray;
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] > array[maxElementIndex]) {
+        maxElementIndex = i;
+      }
     }
+    newArray.push(array[maxElementIndex]);
+    newArray.push(maxElementIndex);
+    return newArray;
+  }
+  if (typeOfArray == "mixed") {
+    newArray.push("неверный тип данных в массиве");
+    newArray.push(array.length);
+    return newArray;
+  }
+}
 
-    if (typeOfArray == 'number') {
-        let maxElementIndex = 0;
-        for (let i = 0; i < array.length; i++) {
-            if (array[i] > array[maxElementIndex]) {
-                maxElementIndex = i;
-            }
-        }
-        newArray.push(array[maxElementIndex]);
-        newArray.push(maxElementIndex);
-        return newArray;
-    }
-    if (typeOfArray == 'mixed') {
-        newArray.push('неверный тип данных в массиве');
-        newArray.push(array.length);
-        return newArray;
-    }
-};
+function workWithArray(array) {
+  let resultArray;
+  if (returnTypeOfArray(array, "string") == true) {
+    resultArray = treatmentArray(array, "string");
+  }
 
-function workWithArray (array) {
-
-let resultArray;
-
-    if (returnTypeOfArray(array,'string') == true){
-       resultArray = treatmentArray(array, 'string')
-        }
-    
-    if (returnTypeOfArray(array,'number') == true){
-        resultArray = treatmentArray(array, 'number')
-        }
-    if (returnTypeOfArray(array,'string') == false && returnTypeOfArray(array,'number') == false){
-        resultArray = treatmentArray(array, 'mixed')
-        }
-    return resultArray;
+  if (returnTypeOfArray(array, "number") == true) {
+    resultArray = treatmentArray(array, "number");
+  }
+  if (
+    returnTypeOfArray(array, "string") == false &&
+    returnTypeOfArray(array, "number") == false
+  ) {
+    resultArray = treatmentArray(array, "mixed");
+  }
+  return resultArray;
 }
 
 //---------------
 
-let stringArray = ['Hello', ' ', 'world', 'My name is Valeria'];
+let stringArray = ["Hello", " ", "world", "My name is Valeria"];
 let intArray = [1, 2, 3, 4, 5, 10, 15, 20];
-let mixedArray = ['Hello', ' ', 'world', 'My name is Valeria', 1, 2, 3]
+let mixedArray = ["Hello", " ", "world", "My name is Valeria", 1, 2, 3];
 
 // console.log(workWithArray(stringArray));
 // console.log(workWithArray(mixedArray));
@@ -95,26 +92,37 @@ let mixedArray = ['Hello', ' ', 'world', 'My name is Valeria', 1, 2, 3]
 // let result toHardThreeOrder(['привет', true, 65],[3, [], false], ['js', 'java', 'script', 'redButton'])
 // console.log(result)// ['привет', js', 'java', 'script', 'redButton', 3, 65, true, false, []]
 
-function sortArray (array1, array2, array3) {
-    let createArray = array1.concat(array2, array3);
-    let typeOfData = ['string', 'boolean', 'number', 'other'];
-    let sortArray = [];
-    for (let i = 0; i < typeOfData.length; i++) {
-        sortArray = sortArray.concat(pushElement(createArray, typeOfData[i], i)); 
-    }     
-    return sortArray;
+function sortArray(array1, array2, array3) {
+  let createArray = array1.concat(array2, array3);
+  let typeOfData = ["string", "boolean", "number", "other"];
+  let sortArray = [];
+  for (let i = 0; i < typeOfData.length; i++) {
+    sortArray = sortArray.concat(pushElement(createArray, typeOfData[i], i));
+  }
+  return sortArray;
 }
 
 function pushElement(array, typeOfData, number) {
-    let newArray = [];
-    for (let i = 0; i < array.length; i++) {
-        if (typeof array[i] == typeOfData) {
-            newArray.push(array[i]);
-        } 
-        if (number == 3 && typeof array[i] !== 'string' && typeof array[i] !== 'boolean' && typeof array[i] !== 'number') {
-            newArray.push(array[i]);
-        }
+  let newArray = [];
+  for (let i = 0; i < array.length; i++) {
+    if (typeof array[i] == typeOfData) {
+      newArray.push(array[i]);
     }
-    return newArray;
+    if (
+      number == 3 &&
+      typeof array[i] !== "string" &&
+      typeof array[i] !== "boolean" &&
+      typeof array[i] !== "number"
+    ) {
+      newArray.push(array[i]);
+    }
+  }
+  return newArray;
 }
-console.log(sortArray(['привет', true, 65],[3, [], false], ['js', 'java', 'script', 'redButton']))
+console.log(
+  sortArray(
+    ["привет", true, 65],
+    [3, [], false],
+    ["js", "java", "script", "redButton"]
+  )
+);
