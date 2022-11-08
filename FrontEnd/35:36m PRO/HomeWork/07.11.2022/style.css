@@ -1,0 +1,38 @@
+.root {
+    width: 1000px;
+    height: 1000px; 
+}
+
+.button-div {
+    margin: 5px;
+    text-align: center;   
+}
+
+.pressBtn1{
+    background: linear-gradient(45deg, rgb(105, 50, 2), rgb(236, 226, 213));
+    font-family: "Courier New", Courier, sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    width: 75px;
+    height: 35px;
+    border: 2px solid rgb(32, 32, 32);
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.5);
+}
+
+.pressBtn2{
+    background: linear-gradient(45deg,  rgb(236, 226, 213), rgb(105, 50, 2));
+}
+
+.pressImg1 {
+    display: block;
+    box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.pressImg2 {
+    display: block;
+    box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+}
