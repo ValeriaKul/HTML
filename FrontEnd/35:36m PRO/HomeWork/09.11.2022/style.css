@@ -1,0 +1,26 @@
+.button{
+    cursor: pointer;
+    
+}
+
+button:active {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    background-color: grey;
+}
+
+.input {
+    cursor: text;
+}
+
+.input_block{
+    cursor: not-allowed;
+}
+
+.task-1 {
+    margin: 10px;
+}
+
+.task-2 {
+    margin: 10px;
+    display: block;
+}
