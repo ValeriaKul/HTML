@@ -164,6 +164,8 @@ let test2 = { test: '2'};
 let test3 = { test: '3'};
 let test4 = { test: '4'};
 Object.assign(user, test1, test2, test3, test4);
+console.log(test2);
+let newArray = Array.from(test1)
+console.log(newArray);
 
-console.log(users);
-
+console.log(Array.from('foo'));
