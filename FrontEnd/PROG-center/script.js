@@ -70,3 +70,22 @@ let uniqueChars = chars.filter((element, index) => {
 });
 
 // console.log(uniqueChars);
+
+//=============21============
+// Создайте функцию handler, которая принимает в качестве аргумента массив со строками и возвращает новый массив из длинн этих строк. 
+// Для решения задачи используйте метод массива map.
+
+// function handler (array) {
+//   let newArray = array.map(el => el.length);
+//   return newArray;
+// };
+
+function handler (array) {
+  let newArray = [];
+	for(let i = 0; i < array.length; i++) {
+		newArray.push(array[i].length);
+    }
+  return newArray;
+}
+
+//=============22============
