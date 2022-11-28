@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.product {
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+
+input:focus {
+    outline: none;
+    background-color: bisque;
+}
+
+.add_form {
+    display: flex;
+    margin: 40px auto;
+    max-width: 900px;
+    border: 2px solid black;
+    padding:  30px;
+    flex-direction: column;
+
+}
+
+.add_form input {
+    margin: 20px 0;
+    padding: 10px;
+    border: 2px solid black;
+}
+
+.add_form button {
+    padding: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+    align-self:  flex-end;
+    width: 200px;
+}
