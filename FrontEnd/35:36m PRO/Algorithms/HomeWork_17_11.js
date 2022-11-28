@@ -1,5 +1,6 @@
-//todo: 1. Даны два целых числа x и n, напишите функцию для вычисления x^n. Решение 1 - рекурсивно O(n). Решение 2 -        улучшить решение 1 до O(lon n)
+//todo: 1. Даны два целых числа x и n, напишите функцию для вычисления x^n. Решение 1 - рекурсивно O(n). Решение 2 - улучшить решение 1 до O(lon n)
 
+//? Мой вариант (рекурсия)
 function pow(x, n) {
   if (n === 1) {
     return x;
@@ -8,7 +9,16 @@ function pow(x, n) {
   }
 }
 console.log(pow(5, 3)); //? 125
+//! Teacher (рекурсия)
+function powerRec(x, n) {
+  if (n == 0) {
+    return 1;
+  }
 
+  return x * powerRec(x, n - 1);
+}
+
+//? Мой вариант (улучшенный вариант)
 function pow2(x, n) {
   if (n === 1) {
     return x;
@@ -22,6 +32,27 @@ function pow2(x, n) {
   }
 }
 console.log(pow2(5, 3)); //? 125
+
+//! Teacher (улучшенный вариант)
+// 1. Получить значение, равное x в степени n / 2
+// 2. Округлить полученное значение вниз до целого
+// 3. Выполнить проверку n на четность
+// 3.1. Если n четное, возвести полученное число в квадрат
+// 3.2. В противном случае возвести в квадрат и умножить на x
+
+function powerRecImproved(x, n) {
+  if (n == 0) {
+    return 1;
+  }
+  let half = powerRecImproved(x, Math.floor(n / 2));
+  if (n % 2 === 0) {
+    return half * half;
+  } else {
+    return x * half * half;
+  }
+}
+
+console.log(powerRecImproved(2, 2));
 
 //todo: 2. Имея два отсортированных массива размера m и n соответственно, вам нужно найти элемент, который будет находиться на k-й позиции в конечном отсортированном массиве.
 
@@ -87,7 +118,9 @@ first !== -1
   ? console.log(`Element 2 occured ${count} times`)
   : console.log("Element not found in the array");
 
-//todo: Найдите пиковый элемент в двумерном массиве. Элемент является пиковым, если он больше или равен своим четырем соседям слева, справа, сверху и снизу. Например, соседями для A[i][j] являются A[i-1][j], A[i+1][j], A[i][j-1] и A[i][j+1]. Для угловых элементов отсутствующие соседи считаются отрицательными бесконечными значениями.
+//todo: Найдите пиковый элемент в двумерном массиве. Элемент является пиковым, если он больше или равен своим четырем соседям слева, справа, сверху и снизу.
+//todo: Например, соседями для A[i][j] являются A[i-1][j], A[i+1][j], A[i][j-1] и A[i][j+1].
+//todo: Для угловых элементов отсутствующие соседи считаются отрицательными бесконечными значениями.
 
 let array = [
   [10, 20, 15],
@@ -95,45 +128,47 @@ let array = [
   [7, 16, 32],
 ];
 
-console.log(array);
-
 function getNum(array) {
-  let newArray = [
-    [0, 0, 0],
-    [0, 0, 0],
-    [0, 0, 0],
-  ];
   for (let i = 0; i < array.length; i++) {
     for (let j = 0; j < array.length; j++) {
-      newArray[i][j] = checkNum(array, i, j) ? 1 : 0;
+      let bool = checkNum(array, i, j);
+      let num = array[i][j];
+      if (bool) {
+        console.log(num);
+      }
     }
   }
-  return newArray;
 }
 
 function checkNum(array, x, y) {
   let countResult = 0;
   let countCheck = 0;
 
-  for (let i = x - 1; i < x + 2; i++) {
-    if (i >= 0 && i < array.length) {
-      for (let j = y - 1; j < y + 2; j++) {
-        if (j >= 0 && j < array.length) {
-            countCheck++;
-          if (array[x][y] > array[i][j]) {
-            countResult++;
-          }
-        }
-      }
+  if (x - 1 >= 0) {
+    countCheck++;
+    if (array[x][y] > array[x - 1][y]) {
+      countResult++;
     }
   }
-  console.log('x - ' + x + '; y - ' + y + ' Check - ' + countCheck + '; Result - ' + countResult);
-
-  if (countCheck === countResult) {
-    return true;
-  } else {
-    return false;
+  if (y - 1 >= 0) {
+    countCheck++;
+    if (array[x][y] > array[x][y - 1]) {
+      countResult++;
+    }
   }
+  if (x + 1 < array.length) {
+    countCheck++;
+    if (array[x][y] > array[x + 1][y]) {
+      countResult++;
+    }
+  }
+  if (y + 1 < array.length) {
+    countCheck++;
+    if (array[x][y] > array[x][y + 1]) {
+      countResult++;
+    }
+  }
+  return countCheck === countResult;
 }
 
 console.log(getNum(array));
