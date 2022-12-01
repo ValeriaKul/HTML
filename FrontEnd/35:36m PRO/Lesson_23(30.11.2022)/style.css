@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    background-color: antiquewhite;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    height: 100vh;
+}
+
+.dark .main {
+    background-color:  darkgray;
+    color: antiquewhite;
+}
+
+.change_mode {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: darkgray;
+    border: none;
+    cursor: pointer;
+}
+
+.dark .change_mode {
+    background-color: antiquewhite;
+}
