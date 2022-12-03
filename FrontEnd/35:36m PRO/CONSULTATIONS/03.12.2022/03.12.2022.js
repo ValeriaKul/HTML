@@ -21,4 +21,4 @@ form.onsubmit = (event) => {
 
 //todo: 01:24:00 01:30:00- создание репозитория
 
-
+//! https://github.com/Ray3en/tel-ran-consultations-fe - репозиторий преподавателя
