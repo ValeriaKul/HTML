@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* https://flatuicolors.com/ */
+
+.add_task {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-between;
+}
+
+.add_task input {
+    width: 70%;
+    padding: 10px;
+}
+
+.add_task button {
+    width: 30%;
+    padding: 10px;
+}
