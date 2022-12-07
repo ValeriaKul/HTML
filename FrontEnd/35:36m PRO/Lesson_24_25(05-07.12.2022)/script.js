@@ -14,13 +14,11 @@
 const form = document.querySelector(".add_task");
 const tasks_container = document.querySelector(".tasks");
 
-let tasks = read_local();
-
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const task = event.target.task.value;
-  tasks.push({ id: Date.now(), task });
-  write_local(tasks);
+
+  write_local([...read_local(), { id: Date.now(), task }]);
   event.target.task.value = "";
   rerender();
 });
@@ -34,7 +32,28 @@ function write_local(array) {
 }
 
 function read_local() {
-  return JSON.parse(localStorage.getItem("tasks")) ?? []; //? ?? - оператор нулевого присвоения. 
+  return JSON.parse(localStorage.getItem("tasks")) ?? []; //? ?? - оператор нулевого присвоения.
+}
+
+function createCard(title, id) {
+  const card = document.createElement("div");
+  const p = document.createElement("p");
+  const button = document.createElement("button");
+  card.append(p, button);
+
+  p.innerText = title;
+  button.innerText = "Delete";
+
+  button.addEventListener("click", () => {
+    deleteCard(id);
+  });
+  return card;
+}
+
+function deleteCard(id) {
+   const newCards = read_local().filter(el => el.id !== id);
+   write_local(newCards);
+   rerender();
 }
 
 //todo: Написать функцию rerender() которая:
@@ -48,12 +67,26 @@ function rerender() {
     p_elem.innerText = "Никаких задач нет!";
     tasks_container.append(p_elem);
   } else {
-    read_local().forEach((item) => {
-      const p_elem = document.createElement("p");
-      p_elem.innerText = item.task;
-      tasks_container.append(p_elem);
+    read_local().forEach(({ task, id }) => {
+      const new_card = createCard(task, id);
+      tasks_container.append(new_card);
     });
   }
 }
 
 rerender();
+
+// вынести процесс создания карточки с делом в функцию createCard
+
+// данная функция получает в качестве аргумента название дела и возвращает
+// параграф с названием дела внутри
+
+// createCard('выучить гриды') -> <p>выучить гриды</p>
+
+// доработать процесс таким образом, чтобы при нажатии на кнопку "Удалить"
+// в консоль выводилась строка "Удалить"
+
+// доработать обработчик нажатия на кнопку таким образом
+// чтобы в консоль выводилась строка "Удалить <id>"
+
+

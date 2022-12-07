@@ -24,3 +24,21 @@
     width: 30%;
     padding: 10px;
 }
+
+.tasks{
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: aquamarine;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px; 
+    /* gap - отступы между колонками */
+}
+
+.tasks div{
+    border: 2px solid black;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
