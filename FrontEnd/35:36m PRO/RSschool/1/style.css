@@ -1,0 +1,49 @@
+/* .mail {
+    padding: 10px 20px; 
+    margin: 30px; 
+    border: 5px solid #040;
+} */
+
+.mail { 
+    font: italic bold 24px Arial;
+    background: hsl(0, 100%, 50%);
+  
+   
+    /* background-position: #aaa; */
+    /* background-repeat: #aaa; */
+    /* background: #aaa; */
+    border-style:dotted;
+    /* position: absolute; */
+}
+.img {
+    background-image: #aaa;
+}
+img {
+    /* position: relative;  */
+    padding: 5px 10px 15px 20px;
+    /* top: 200px; */
+    /* background-image: #aaa;
+    animation-duration: calc(1/2)s; */
+    /* position: absolute; */
+}
+
+.mail { 
+    font: italic bold 24px Arial;
+    background: hsl(0, 100%, 50%);
+  
+   
+    /* background-position: #aaa; */
+    /* background-repeat: #aaa; */
+    /* background: #aaa; */
+    border-style:dotted;
+    /* position: absolute; */
+}
+
+.mail:hover { 
+    font: italic bold 64px Arial;
+    background: hsl(188, 51%, 33%);
+    border-style:dotted;
+    animation-duration: 500ms;
+
+
+}
