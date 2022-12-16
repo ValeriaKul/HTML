@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background-color: #e8eaee;
+    display: flex;
+    justify-content: center;
+  }
+  main {
+    width: 700px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 50px 0;
+  }
+  .add-form {
+    padding: 24px;
+    display: flex;
+    gap: 10px;
+  }
+  .add-name {
+    width: 100%;
+    padding: 24px;
+    background-color: #f2f4f8;
+    border-radius: 12px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+  }
+  .submit-btn {
+    padding: 24px 12px;
+    background-color: black;
+    font-size: 24px;
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  .products-wrapper {
+    padding: 24px;
+  }
+  .product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 10px;
+    /* padding-right: 0; */
+    border-radius: 8px 0 0 8px;
+  }
+  .product:hover {
+    background-color: #e8eaee;
+    transition: 0.5s;
+  }
+  .product-name {
+    font-size: 18px;
+  }
+  .product-actions {
+    padding-right: 24px;
+  }
+  button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    /* border: none; */
+    border: 1px solid gray;
+    outline: none;
+    border-radius: 8px;
+    background-color: #f2f4f8;
+    cursor: pointer;
+  }
+  .notification {
+    display: none;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  .notification-text {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+  }
+  .notification.success {
+    background-color: green;
+  }
+  .notification.danger {
+    background-color: red;
+  }
