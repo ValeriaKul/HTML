@@ -8,7 +8,6 @@ const notification = document.querySelector(".notification"); // уведомл�
 const submitBtn = document.querySelector(".submit-btn"); // кнопка редактировать
 
 let editMode = false
-// let editMode
 
 //* Отображение продуктов при првоначальной загрузке
 const showProducts = () => {
