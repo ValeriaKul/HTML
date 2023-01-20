@@ -1,0 +1,39 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Заголовок моего первого поста",
+      "descr": "Описание моего первого поста"
+    },
+    {
+      "title": "Post 2",
+      "descr": "2",
+      "id": 2
+    },
+    {
+      "title": "Post 3",
+      "descr": "3",
+      "id": 3
+    },
+    {
+      "title": "Post 4",
+      "descr": "4",
+      "id": 4
+    },
+    {
+      "title": "Post 5",
+      "descr": "5",
+      "id": 5
+    },
+    {
+      "title": "test",
+      "descr": "TEST",
+      "id": 6
+    },
+    {
+      "title": "sefdgvc",
+      "descr": "esfd",
+      "id": 7
+    }
+  ]
+}
