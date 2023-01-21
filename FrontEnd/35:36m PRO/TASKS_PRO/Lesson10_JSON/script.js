@@ -42,11 +42,13 @@ let container = document.querySelector(".container");
 const form = document.querySelector("form");
 const title = document.querySelector("input[name='title']")
 const descr = document.querySelector("input[name='descr']")
+const deleteButtons = document.querySelectorAll(".delete_btn")
+const URL = 'http://localhost:3000/posts'
 
 // GET - запрос
 
 const fetchData = () => {
-  fetch("http://localhost:3000/posts", {
+  fetch(URL, {
     method: "GET"
   }) //возвращает промис
     .then((response) => {
@@ -61,12 +63,7 @@ fetchData();
 const showData = (arr) => {
   container.innerHTML = '';
   arr.map((el) => {
-    container.innerHTML += `
-            <div class="post">
-                <h5>${el.title}</h5>
-                <p class="post-descr">${el.descr}</p>
-            </div>
-        `;
+    showNewPost(el);
   });
 };
 
@@ -86,7 +83,7 @@ form.addEventListener("submit", e => {
 
 
 const addPost = (post) => {
-    fetch("http://localhost:3000/posts", {
+    fetch(URL, {
         method: "POST",
         headers: {
             "Content-type": "application/json"
@@ -108,6 +105,7 @@ const showNewPost = (post) => {
     <div class="post">
         <h5>${post.title}</h5>
         <p class="post-descr">${post.descr}</p>
+        <button class="delete_btn" id = ${post.id}>Delete</button>
     </div>
     `
 }
@@ -117,15 +115,34 @@ const clearInput = () => {
     title.value = '';
     descr.value = '';
 }
+document.addEventListener('click', e => {
+    const post_for_delete = e.target
+    if (post_for_delete.className === 'delete_btn') {
+        deletePost(e.target);
+    }
+})
 
-const Main = () => {
-    const [title, setTitle] = useState('')
-    return (
-        <div>
-            <input 
-                value={title}
-                onChange={e => setTitle(e.target.value)}
-            />
-        </div>
-    )
+const deletePost = (btn) => {
+    fetch(`${URL}/${btn.id}`, {
+        // При отправке DELETE нам нужно обратиться к конкретному объекту по его id
+        method: "DELETE"
+    })
+    .then(() => {
+        // в ответе на DELETE приходит пустой объект {}
+        // из HTML удалить элемент, на кнопку которого мы нажали
+        if (response.ok) {
+            btn.parentElement.remove()
+        }
+    })
+    .catch()
 }
+
+// UPDATE - (PUT)
+/* 
+    1. Создать кнопку "Редактировать"
+    2. Вешаем слушатель события
+    3. при нажатии вызываем функцию, которая меняет в карточке элемента теги h5, p на теги Input 
+        вывести конпку СОХРАНИТЬ
+    4. По нажатию на СОХРАНИТЬ вызывать функцию, которая будет отправлять на сервер обновление данных
+    5. В функции из п. 4  реализовать метод PUT (fetch), в теле передать данные из п. 4
+*/

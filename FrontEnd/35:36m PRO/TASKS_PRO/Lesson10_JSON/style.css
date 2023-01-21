@@ -47,3 +47,13 @@ h2 {
     font-size: 36px;
     text-align: center;
 }
+
+.delete_btn {
+    margin-top: 20px;
+    padding: 15px 20px ;
+    border: none;
+    outline: none;
+    background-color: crimson;
+    border-radius: 5px;
+    font-size: 18px;
+}
